@@ -1,5 +1,5 @@
 {
-  "name": "venom-bot-railway",
+  "name": "venom-bot-railway-headless",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {

@@ -5,7 +5,15 @@ create({
   multidevice: true,
   headless: true,
   useChrome: false,
-  args: ['--no-sandbox']
+  args: [
+    '--no-sandbox',
+    '--disable-setuid-sandbox',
+    '--disable-gpu',
+    '--disable-dev-shm-usage',
+    '--disable-infobars',
+    '--window-size=1920,1080',
+    '--single-process'
+  ]
 }).then((client) => {
   console.log('✅ Bot conectado com sucesso!');
 
@@ -15,7 +23,6 @@ create({
     console.log('💬 Texto:', message.body);
 
     const texto = message.body?.toLowerCase();
-
     if (!texto || message.fromMe) return;
 
     if (texto === 'qual o treino') {
